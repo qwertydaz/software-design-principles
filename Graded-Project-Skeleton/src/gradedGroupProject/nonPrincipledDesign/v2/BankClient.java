@@ -38,43 +38,6 @@ public class BankClient {
 		
 	}
 
-	public int addAccount(String accountType){
-		if (accountType == null || (accountType != null && ! accountType.equals("primary") && ! accountType.equals("savings"))) {
-			System.err.println("Error create account transaction");
-			return -1;
-			
-		}
-		else {
-			if (accountNumbers == null) {
-				accountNumbers = new ArrayList<Integer>();
-				
-			}
-			
-			if (accountTypes == null) {
-				accountTypes = new ArrayList<String>();
-				
-			}
-			
-			if (accountVerified == null) {
-				accountVerified = new ArrayList<Boolean>();
-				
-			}
-			
-			if (accountBalances == null) {
-				accountBalances = new ArrayList<Double>();
-				
-			}
-			
-			accountNumbers.add(accountCount.incrementAndGet());
-			accountTypes.add(accountType);
-			accountVerified.add(false);
-			accountBalances.add(0.0);
-			return accountCount.get();
-			
-		}
-		
-	}
-
 	public boolean askForVerification(int clientID, int accountNumber, String adminName){
 		//Assume we sent a message to bank administrator
 		return true;
@@ -88,22 +51,6 @@ public class BankClient {
 				
 			}
 		
-		}
-		
-	}
-
-	public void changeClientDetails(String name, String address, Date birthDate, String username, String password){
-		if (name == null || address == null || birthDate == null || username == null || password == null) {
-			System.err.println("Error change details transaction");
-			
-		}
-		else {
-			this.name = name;
-			this.address = address;
-			this.birthDate = birthDate;
-			this.username = username;
-			this.password = password;
-			
 		}
 		
 	}
@@ -157,26 +104,6 @@ public class BankClient {
 		
 	}
 
-	public void deleteAccount(int accountNumber) {
-		int pos = 0;
-		for (pos = 0; pos < accountNumbers.size(); ++pos) {
-			if (accountNumbers.get(pos) == accountNumber) {
-				break;
-				
-			}
-			
-		}
-
-		if (pos >= 0 && pos < accountNumbers.size()) {
-			accountNumbers.remove(pos);
-			accountTypes.remove(pos);
-			accountVerified.remove(pos);
-			accountBalances.remove(pos);
-			
-		}
-		
-	}
-
 	public void transfer(int fromAccountNumber, int toAccountNumber, double amount) {
 		int from = 0;
 		for (from = 0; from < accountNumbers.size(); ++from) {
@@ -224,29 +151,6 @@ public class BankClient {
 		else {
 			//Assume we sent a message to bank employee
 			return true;
-			
-		}
-		
-	}
-
-	public void bookAppointment(Date date, String  employeeName){
-		if (date == null || employeeName == null) {
-			System.err.println("Error book appointment transaction");
-			
-		}
-		else {
-			if (appointments == null) {
-				appointments = new ArrayList<Date>();
-				
-			}
-
-			appointments.add(date);
-			if (bankEmployeesWithAppointments == null) {
-				bankEmployeesWithAppointments = new ArrayList<String>();
-				
-			}
-
-			bankEmployeesWithAppointments.add(employeeName);
 			
 		}
 		

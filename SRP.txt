@@ -1,12 +1,20 @@
-Functional Requirements		BankClient Methods
-~~~~~~~~~~~~~~~~~~~~~~~~	~~~~~~~~~~~~~~~~~~~~~~~~~~~
-RegisterBankClient		main()
-CreateProfileBankClient		createProfile
-CreateBankAccount		addAccount
-LoginBankClient			main()
-ChangeBankClientDetails		changeClientDetials
-DeleteBankAccount		deleteAccount
-MoneyTransfer			transfer
-BookAppointment			bookAppointment
-VerifyBankAccountOpening	askForVerification
-ScheduleAppointment		askForSchedulingAppointment
+SRP Classes			BankClient Methods		Done?
+~~~~~~~~~~~~~~~~~~~~~~~~	~~~~~~~~~~~~~~~~~~~~~~~~~~~	~~~~~~~~
+BankAdmin			-				-
+BankClient			-				-
+BankEmployee			-				-
+BookAppointment			bookAppointment			Yes
+ChangeBankClientDetails		changeClientDetials		Yes
+CreateBankAccount		addAccount			Yes
+CreateProfileBankClient		createProfile			Yes
+DeleteBankAccount		deleteAccount			No
+LoginBankClient			main()				No
+MoneyTransfer			transfer			No
+RegisterBankClient		main()				No
+ScheduleAppointment		askForSchedulingAppointment	No
+VerifyBankAccountOpening	askForVerification		No
+
+Comments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CreateBankAccount - changed from -1 or x return value to setting a class
+attribute.
