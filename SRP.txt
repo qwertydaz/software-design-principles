@@ -1,0 +1,12 @@
+Functional Requirements		BankClient Methods
+~~~~~~~~~~~~~~~~~~~~~~~~	~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RegisterBankClient		main()
+CreateProfileBankClient		createProfile
+CreateBankAccount		addAccount
+Login				main()
+ChangeBankClientDetails		changeClientDetials
+DeleteBankAccount		deleteAccount
+MoneyTransfer			transfer
+BookAppointment			bookAppointment
+VerifyBankAccountOpening	askForVerification
+ScheduleAppointment		askForSchedulingAppointment
