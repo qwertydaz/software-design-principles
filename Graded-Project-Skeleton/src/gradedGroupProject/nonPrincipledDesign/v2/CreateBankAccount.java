@@ -12,37 +12,41 @@ public class CreateBankAccount {
 	private List<Double> accountBalances;
 	private int accountNum;
 	
-	public CreateBankAccount(String accountType) {
+	public CreateBankAccount(String accountType, List<Integer> accountNumbers, List<String> accountTypes, List<Boolean> accountVerified, List<Double> accountBalances) {
+		this.accountNumbers = accountNumbers;
+		this.accountTypes = accountTypes;
+		this.accountVerified = accountVerified;
+		this.accountBalances = accountBalances;
 		if (accountType == null || (accountType != null && ! accountType.equals("primary") && ! accountType.equals("savings"))) {
 			System.err.println("Error create account transaction");
 			this.accountNum = -1;
 			
 		}
 		else {
-			if (accountNumbers == null) {
-				accountNumbers = new ArrayList<Integer>();
+			if (this.accountNumbers == null) {
+				this.accountNumbers = new ArrayList<Integer>();
 				
 			}
 			
-			if (accountTypes == null) {
-				accountTypes = new ArrayList<String>();
+			if (this.accountTypes == null) {
+				this.accountTypes = new ArrayList<String>();
 				
 			}
 			
-			if (accountVerified == null) {
-				accountVerified = new ArrayList<Boolean>();
+			if (this.accountVerified == null) {
+				this.accountVerified = new ArrayList<Boolean>();
 				
 			}
 			
-			if (accountBalances == null) {
-				accountBalances = new ArrayList<Double>();
+			if (this.accountBalances == null) {
+				this.accountBalances = new ArrayList<Double>();
 				
 			}
 			
-			accountNumbers.add(accountCount.incrementAndGet());
-			accountTypes.add(accountType);
-			accountVerified.add(false);
-			accountBalances.add(0.0);
+			this.accountNumbers.add(accountCount.incrementAndGet());
+			this.accountTypes.add(accountType);
+			this.accountVerified.add(false);
+			this.accountBalances.add(0.0);
 			this.accountNum = accountCount.get();
 			
 		}
