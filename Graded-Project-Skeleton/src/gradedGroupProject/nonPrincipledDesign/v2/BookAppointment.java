@@ -5,27 +5,33 @@ import java.util.Date;
 import java.util.List;
 
 public class BookAppointment {
+	private Date date;
+	private String employeeName;
 	private List<Date> appointments;
 	private List<String> bankEmployeesWithAppointments;
 	
-	public BookAppointment(Date date, String  employeeName){
-		if (date == null || employeeName == null) {
+	public BookAppointment(Date date, String employeeName, List<Date> appointments, List<String> bankEmployeesWithAppointments) {
+		this.date = date;
+		this.employeeName = employeeName;
+		this.appointments = appointments;
+		this.bankEmployeesWithAppointments = bankEmployeesWithAppointments;
+		if (this.date == null || this.employeeName == null) {
 			System.err.println("Error book appointment transaction");
 			
 		}
 		else {
-			if (appointments == null) {
-				appointments = new ArrayList<Date>();
+			if (this.appointments == null) {
+				this.appointments = new ArrayList<Date>();
 				
 			}
 
-			appointments.add(date);
-			if (bankEmployeesWithAppointments == null) {
-				bankEmployeesWithAppointments = new ArrayList<String>();
+			this.appointments.add(this.date);
+			if (this.bankEmployeesWithAppointments == null) {
+				this.bankEmployeesWithAppointments = new ArrayList<String>();
 				
 			}
 
-			bankEmployeesWithAppointments.add(employeeName);
+			this.bankEmployeesWithAppointments.add(this.employeeName);
 			
 		}
 		
