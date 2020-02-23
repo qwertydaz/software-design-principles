@@ -3,7 +3,7 @@ Functional Requirements		BankClient Methods
 RegisterBankClient		main()
 CreateProfileBankClient		createProfile
 CreateBankAccount		addAccount
-Login				main()
+LoginBankClient			main()
 ChangeBankClientDetails		changeClientDetials
 DeleteBankAccount		deleteAccount
 MoneyTransfer			transfer

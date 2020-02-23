@@ -38,20 +38,6 @@ public class BankClient {
 		
 	}
 
-	public void createProfile(String name, String address, Date birthDate){
-		if (name == null || address == null || birthDate == null) {
-			System.err.println("Error create profile transaction");
-			
-		}
-		else {
-			this.name = name;
-			this.address = address;
-			this.birthDate = birthDate;
-			
-		}
-		
-	}
-
 	public int addAccount(String accountType){
 		if (accountType == null || (accountType != null && ! accountType.equals("primary") && ! accountType.equals("savings"))) {
 			System.err.println("Error create account transaction");
