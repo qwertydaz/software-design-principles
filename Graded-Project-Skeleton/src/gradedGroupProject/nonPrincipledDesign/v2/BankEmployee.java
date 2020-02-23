@@ -1,4 +1,4 @@
-package gradedGroupProject.nonPrincipleDesign.v2;
+package gradedGroupProject.nonPrincipledDesign.v2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
